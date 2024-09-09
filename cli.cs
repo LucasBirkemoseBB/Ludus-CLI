@@ -6,13 +6,51 @@ namespace cli
 {
 	public readonly struct CursorPosition
 	{
+		public int x{get;}
+		public int y{get;}
+
 		public CursorPosition(int x, int y)
 		{
 			this.x = x;
 			this.y = y;
+		}	
+	};
+
+	public readonly struct TextBox
+	{
+		private CursorPosition position{get;}
+		private int r{get;}
+		private int c{get;}
+
+		public TextBox(CursorPosition position, int r, int c)
+		{
+			this.position = position;
+			this.r = r;	// rows
+			this.c = c;	// collumns
 		}
-		public int x{get;}
-		public int y{get;}
+
+		// Carsten ik bliv sur pls, fordi det er funktionelt programmering med currying
+		// Gad sgu bare ikke tænke meget om denne funktion
+		// -Mvh Lucas
+		public readonly DrawMethod draw(ref string[] strs) {
+			var self = this;
+			var text = strs;
+			return (bool run) => {
+				if(!run) return self.position;
+
+				Console.SetCursorPosition(self.position.x, self.position.y);
+				Console.Write("╭" + new string('─', self.c) + "╮");
+				foreach(var line in text.Select((val, index) => new { index, val }))
+				{
+					Console.SetCursorPosition(self.position.x, self.position.y + line.index+1);
+					Console.Write("│" + line.val.PadRight(self.c) + "│");
+				}
+				Console.SetCursorPosition(self.position.x, self.position.y + self.r+1);
+				Console.Write("╰" + new string('─', self.c) + "╯");
+
+				return self.position;
+			};
+		}
 	};
 
 	public delegate CursorPosition DrawMethod(bool run = false);
@@ -52,6 +90,11 @@ namespace cli
 
 				return position;
 			});
+		}
+
+		protected void AddBox(TextBox box, ref string[] text, ref List<DrawMethod> buffer)
+		{
+			buffer.Add(box.draw(ref text));
 		}
 	}
 }
