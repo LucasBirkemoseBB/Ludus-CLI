@@ -24,6 +24,9 @@ namespace Program
 
 		}
 
-
+		private void printBalls() 
+		{
+			Console.WriteLine("Free robucx");
+		}
 	}
 }
