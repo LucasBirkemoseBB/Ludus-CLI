@@ -45,7 +45,7 @@ namespace cli
 			
 			buffer.Add(() => {
 				Console.SetCursorPosition(position.x, position.y);
-				Console.WriteLine(str);
+				Console.Write(str);
 			});
 		}
 	}
