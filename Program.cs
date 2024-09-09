@@ -24,6 +24,9 @@ namespace Program
 
 		}
 
-
+		private void saySike() 
+		{
+			Console.WriteLine("Sike");
+		}
 	}
 }
