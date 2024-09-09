@@ -4,7 +4,7 @@ namespace UnitTests
 {
 	public class UnitTests<T>
 	{
-		public delegate bool CompareFunc(T a, T b);
+		public delegate bool CompareFunc(T...a);
 		public static bool Test(T input, T expected, CompareFunc compare) 
 		{
 			return compare(input, expected);
