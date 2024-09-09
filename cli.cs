@@ -15,7 +15,7 @@ namespace cli
 		public int y{get;}
 	};
 
-	public delegate void DrawMethod();
+	public delegate CursorPosition DrawMethod(bool run = false);
 	// using MethodBuffer = List<DrawMethod>;
 
 	public class CLI 
@@ -28,10 +28,12 @@ namespace cli
 		public void Render(List<DrawMethod> buffer)
 		{
 			Console.Clear();
+			buffer = buffer.OrderBy(o=>o().y).ToList();
+		
 			// Loop through each and every method in list and render all of the draw calls in the screen
 			foreach(var dr in buffer)
 			{
-				dr();	
+				dr(true);	
 			}
 		}
 	}
@@ -43,9 +45,12 @@ namespace cli
 		protected void WriteText(string str, CursorPosition position, ref List<DrawMethod> buffer)
 		{
 			
-			buffer.Add(() => {
+			buffer.Add((run) => {
+				if(!run) return position;
 				Console.SetCursorPosition(position.x, position.y);
 				Console.Write(str);
+
+				return position;
 			});
 		}
 	}
