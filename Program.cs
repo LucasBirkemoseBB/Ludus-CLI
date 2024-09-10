@@ -1,32 +1,30 @@
-﻿// See https://aka.ms/new-console-template for more information
-// Console.WriteLine("Hello, World!");
-using System;
+﻿using System;
+using cli;
+using test;
 
 namespace Program
 {
-	public class Student 
-	{
-		public string navn{get}
-		public int alder{get}
-		public string studieretning{get;set}
-		public bool studieaktiv{get;set}
-
-		override public string ToString() 
-		{
-			return $"{navn} er {alder} år gammel og studere {studieretning}";
-		}
-	}
-
 	internal class Program 
 	{
-		static void main(string[] args)
+		static void Main(string[] args)
 		{
+			// Write all code here.
+			List<DrawMethod> draw_methods = new List<DrawMethod>();
 
+			CLI cli = new CLI();
+			CLS	screen = new Test();
+
+			screen.Draw(ref draw_methods);
+
+			cli.Render(draw_methods);
 		}
+<<<<<<< HEAD
 
 		private void saySike() 
 		{
 			Console.WriteLine("Sike");
 		}
+=======
+>>>>>>> dc639591d2b0111d67327f189e791f2d75480630
 	}
 }
