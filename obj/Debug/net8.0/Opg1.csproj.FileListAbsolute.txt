@@ -13,3 +13,18 @@
 /home/lucas/cs/obj/Debug/net8.0/Opg1.pdb
 /home/lucas/cs/obj/Debug/net8.0/Opg1.genruntimeconfig.cache
 /home/lucas/cs/obj/Debug/net8.0/ref/Opg1.dll
+C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\bin\Debug\net8.0\Opg1.exe
+C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\bin\Debug\net8.0\Opg1.deps.json
+C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\bin\Debug\net8.0\Opg1.runtimeconfig.json
+C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\bin\Debug\net8.0\Opg1.dll
+C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\bin\Debug\net8.0\Opg1.pdb
+C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\obj\Debug\net8.0\Opg1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\obj\Debug\net8.0\Opg1.AssemblyInfoInputs.cache
+C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\obj\Debug\net8.0\Opg1.AssemblyInfo.cs
+C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\obj\Debug\net8.0\Opg1.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\obj\Debug\net8.0\Opg1.sourcelink.json
+C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\obj\Debug\net8.0\Opg1.dll
+C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\obj\Debug\net8.0\refint\Opg1.dll
+C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\obj\Debug\net8.0\Opg1.pdb
+C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\obj\Debug\net8.0\Opg1.genruntimeconfig.cache
+C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\obj\Debug\net8.0\ref\Opg1.dll

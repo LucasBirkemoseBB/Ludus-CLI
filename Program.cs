@@ -6,6 +6,7 @@ namespace Program
 {
 	internal class Program 
 	{
+		// Main entry
 		static void Main(string[] args)
 		{
 			// Write all code here.
