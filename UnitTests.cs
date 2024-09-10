@@ -16,7 +16,10 @@ namespace UnitTests
 	{
 		public void doTest()
 		{
-			UnitTests<int>.Test(Add(3,4), 7, (a, b) => { return a==b; });
+			if(UnitTests<int>.Test(Add(3,4), 7, (a, b) => { return a==b; }))
+			{
+				Console.WriteLine("Unit test passed!");				
+			}
 		}
 
 		public int Add(int a, int b)
