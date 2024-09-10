@@ -12,6 +12,7 @@ namespace test
 
     public override void Draw(ref List<DrawMethod> buffer) 
     {
+      
       //                                           X   Y
       CursorPosition position = new CursorPosition(10, 10);
       WriteText("This is a string\0", position, ref buffer);
