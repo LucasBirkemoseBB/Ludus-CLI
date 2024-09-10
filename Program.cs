@@ -18,13 +18,5 @@ namespace Program
 
 			cli.Render(draw_methods);
 		}
-<<<<<<< HEAD
-
-		private void saySike() 
-		{
-			Console.WriteLine("Sike");
-		}
-=======
->>>>>>> dc639591d2b0111d67327f189e791f2d75480630
 	}
 }

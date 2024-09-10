@@ -8,10 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Opg1
-<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\armin\code\csproj1\
-=======
-build_property.ProjectDir = /home/lucas/cs/
->>>>>>> dc639591d2b0111d67327f189e791f2d75480630
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
