@@ -1,6 +1,6 @@
 ﻿using System;
 using cli;
-using test;
+using LoginSystem;
 
 namespace Program
 {
@@ -13,9 +13,10 @@ namespace Program
 			List<DrawMethod> draw_methods = new List<DrawMethod>();
 
 			CLI cli = new CLI();
-			CLS	screen = new Test();
+			CLS	screen = new Login();
 
 			screen.Draw(ref draw_methods);
+			// Aomng comment
 
 			cli.Render(draw_methods);
 		}

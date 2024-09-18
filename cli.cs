@@ -22,11 +22,14 @@ namespace cli
 		private int r{get;}
 		private int c{get;}
 
-		public TextBox(CursorPosition position, int r, int c)
+		private bool centeredText{get;}		
+
+		public TextBox(CursorPosition position, int r, int c, bool centeredText = false)
 		{
 			this.position = position;
 			this.r = r;	// rows
 			this.c = c;	// collumns
+			this.centeredText = centeredText;
 		}
 
 		// Carsten ik bliv sur pls, fordi det er funktionelt programmering med currying
@@ -43,7 +46,11 @@ namespace cli
 				foreach(var line in text.Select((val, index) => new { index, val }))
 				{
 					Console.SetCursorPosition(self.position.x, self.position.y + line.index+1);
-					Console.Write("│" + line.val.PadRight(self.c) + "│");
+					if(!self.centeredText) Console.Write("│" + line.val.PadRight(self.c) + "│");
+					else 
+					{
+						Console.Write("│" + line.val.PadRight(self.c-line.val.Length).PadLeft(self.c) + "│");
+					}
 				}
 				Console.SetCursorPosition(self.position.x, self.position.y + self.r+1);
 				Console.Write("╰" + new string('─', self.c) + "╯");
@@ -53,8 +60,58 @@ namespace cli
 		}
 	};
 
+	public readonly struct InputBox 
+	{
+		private CursorPosition position{get;}
+		private int r{get;}
+		private int c{get;}
+
+		public InputBox(CursorPosition position, int r, int c)
+		{
+			this.position = position;
+			this.r = r;	// rows
+			this.c = c;	// collumns
+		}
+
+		public readonly DrawMethod draw() 
+		{
+			var self = this;
+			return (bool run) =>
+			{
+				if(!run) return self.position;
+/*
+				string text = "";
+
+				Console.SetCursorPosition(self.position.x, self.position.y);
+				Console.Write("╭" + new string('─', self.c) + "╮");
+				
+				Console.SetCursorPosition(self.position.x, self.position.y + 1);
+				Console.Write("│" + text.val.PadRight(self.c) + "│");
+					
+				Console.SetCursorPosition(self.position.x, self.position.y + 2);
+				Console.Write("╰" + new string('─', self.c) + "╯");
+*/
+				/*
+				while((key = Console.Read()))
+				{
+					text += key;
+					Console.SetCursorPosition(self.position.x, self.position.y);
+					Console.Write("╭" + new string('─', self.c) + "╮");
+					
+					Console.SetCursorPosition(self.position.x, self.position.y + 1);
+					Console.Write("│" + text.val.PadRight(self.c) + "│");
+						
+					Console.SetCursorPosition(self.position.x, self.position.y + 2);
+					Console.Write("╰" + new string('─', self.c) + "╯");
+				}*/
+
+				return self.position;
+			};
+		}
+
+	}
+
 	public delegate CursorPosition DrawMethod(bool run = false);
-	// using MethodBuffer = List<DrawMethod>;
 
 	public class CLI 
 	{

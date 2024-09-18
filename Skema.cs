@@ -9,7 +9,7 @@ namespace SkemaSystem
 {
   public readonly struct Klasse 
   {
-    private readonly int teacherId{get;};
+    private readonly int teacherId{get;}
     private readonly int location{get;}
     private readonly int length{get;}
     private readonly string room{get;}
