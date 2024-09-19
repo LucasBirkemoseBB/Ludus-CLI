@@ -73,37 +73,23 @@ namespace cli
 			this.c = c;	// collumns
 		}
 
-		public readonly DrawMethod draw() 
+		public readonly DrawMethod draw(ref string input) 
 		{
 			var self = this;
+			string text = input;
 			return (bool run) =>
 			{
 				if(!run) return self.position;
-/*
-				string text = "";
 
 				Console.SetCursorPosition(self.position.x, self.position.y);
 				Console.Write("╭" + new string('─', self.c) + "╮");
 				
 				Console.SetCursorPosition(self.position.x, self.position.y + 1);
-				Console.Write("│" + text.val.PadRight(self.c) + "│");
+				Console.Write("│" + text.PadRight(self.c) + "│");
 					
 				Console.SetCursorPosition(self.position.x, self.position.y + 2);
 				Console.Write("╰" + new string('─', self.c) + "╯");
-*/
-				/*
-				while((key = Console.Read()))
-				{
-					text += key;
-					Console.SetCursorPosition(self.position.x, self.position.y);
-					Console.Write("╭" + new string('─', self.c) + "╮");
-					
-					Console.SetCursorPosition(self.position.x, self.position.y + 1);
-					Console.Write("│" + text.val.PadRight(self.c) + "│");
-						
-					Console.SetCursorPosition(self.position.x, self.position.y + 2);
-					Console.Write("╰" + new string('─', self.c) + "╯");
-				}*/
+
 
 				return self.position;
 			};
@@ -137,6 +123,7 @@ namespace cli
 	{
 		public abstract void Initialize();
 		public abstract void Draw(ref List<DrawMethod> buffer);
+		public abstract void Update();
 		protected void WriteText(string str, CursorPosition position, ref List<DrawMethod> buffer)
 		{
 			
@@ -150,6 +137,11 @@ namespace cli
 		}
 
 		protected void AddBox(TextBox box, ref string[] text, ref List<DrawMethod> buffer)
+		{
+			buffer.Add(box.draw(ref text));
+		}
+
+		protected void AddInputBox(InputBox box, ref string text, ref List<DrawMethod> buffer) 
 		{
 			buffer.Add(box.draw(ref text));
 		}

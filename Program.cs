@@ -2,6 +2,8 @@
 using cli;
 using LoginSystem;
 
+using InputHandler;
+
 namespace Program
 {
 	internal class Program 
@@ -9,16 +11,22 @@ namespace Program
 		// Main entry
 		static void Main(string[] args)
 		{
+
 			// Write all code here.
 			List<DrawMethod> draw_methods = new List<DrawMethod>();
 
 			CLI cli = new CLI();
 			CLS	screen = new Login();
-
+		
+			// Console.Clear();
 			screen.Draw(ref draw_methods);
+			
 			// Aomng comment
+			cli.Render(draw_methods);	
 
-			cli.Render(draw_methods);
+			for(;;)
+				continue;
+			// Console.Read();			
 		}
 	}
 }
