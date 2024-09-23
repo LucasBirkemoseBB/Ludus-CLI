@@ -17,16 +17,16 @@ namespace LoginSystem
         {
             buffer.Clear();
             CursorPosition position = new CursorPosition(0, 0);
-            TextBox box = new TextBox(position, 3, 40, true);
-            string[] text = {"", "Login and KYS", ""};
+            TextBox box = new TextBox(position, 3, 15, true);
+            string[] text = {"", "Login", ""};
             AddBox(box, ref text, ref buffer);
         
             CursorPosition inputPosition = new CursorPosition(10, 10);
-            InputBox ibox = new InputBox(inputPosition, "Input box number uno!", 1, 40);
+            InputBox ibox = new InputBox(inputPosition, "Username", 1, 40);
             AddInputBox(ibox, inputStrings[0], ref buffer);
 
             CursorPosition inputPosition2 = new CursorPosition(10, 14);
-            InputBox ibox2 = new InputBox(inputPosition2, "Input box number dos!", 1, 40);
+            InputBox ibox2 = new InputBox(inputPosition2, "Password", 1, 40);
             AddInputBox(ibox2, inputStrings[1], ref buffer);
 
             // if(keyDown != '\0') text = text + keyDown; 
