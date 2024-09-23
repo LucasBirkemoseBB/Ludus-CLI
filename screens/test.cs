@@ -28,5 +28,10 @@ namespace test
       // string[] text = { "Among", "Sussy Baka", "Hello,World" };
       AddBox(box2, ref text, ref buffer);
     }
+
+    public override void Update() 
+    {
+      
+    }
   }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 
 namespace cli
 {
@@ -65,24 +66,28 @@ namespace cli
 		private CursorPosition position{get;}
 		private int r{get;}
 		private int c{get;}
+		private string titl{get;}
 
-		public InputBox(CursorPosition position, int r, int c)
+		public InputBox(CursorPosition position, string title, int r, int c)
 		{
 			this.position = position;
+			this.titl = title;
 			this.r = r;	// rows
 			this.c = c;	// collumns
 		}
 
-		public readonly DrawMethod draw(ref string input) 
+		public readonly DrawMethod draw(string input) 
 		{
 			var self = this;
 			string text = input;
+			string title = titl;
 			return (bool run) =>
 			{
 				if(!run) return self.position;
+				if(text.Length > self.c) text = text.Substring(0, self.c);
 
 				Console.SetCursorPosition(self.position.x, self.position.y);
-				Console.Write("╭" + new string('─', self.c) + "╮");
+				Console.Write("╭" + title + new string('─', self.c - title.Length) + "╮");
 				
 				Console.SetCursorPosition(self.position.x, self.position.y + 1);
 				Console.Write("│" + text.PadRight(self.c) + "│");
@@ -108,7 +113,8 @@ namespace cli
 
 		public void Render(List<DrawMethod> buffer)
 		{
-			Console.Clear();
+			// Console.Clear();
+			// Fkn sorts so it renders from top to bottom
 			buffer = buffer.OrderBy(o=>o().y).ToList();
 		
 			// Loop through each and every method in list and render all of the draw calls in the screen
@@ -117,10 +123,15 @@ namespace cli
 				dr(true);	
 			}
 		}
+
 	}
 
 	public abstract class CLS
 	{
+		protected bool RedoRender = false;
+		protected List<string> inputStrings = new List<string>();
+		protected int selectedStringIndex = 0;
+
 		public abstract void Initialize();
 		public abstract void Draw(ref List<DrawMethod> buffer);
 		public abstract void Update();
@@ -141,9 +152,45 @@ namespace cli
 			buffer.Add(box.draw(ref text));
 		}
 
-		protected void AddInputBox(InputBox box, ref string text, ref List<DrawMethod> buffer) 
+		protected void AddInputBox(InputBox box, string text, ref List<DrawMethod> buffer) 
 		{
-			buffer.Add(box.draw(ref text));
+			buffer.Add(box.draw(text));
+		}
+
+		protected void AddInputBox(InputBox box, int inputIdx, ref List<DrawMethod> buffer) 
+		{
+			buffer.Add(box.draw(inputStrings[inputIdx]));
+		}
+
+		protected void HandleInput(char key) 
+		{
+			if(key == '\t') 
+			{
+				selectedStringIndex = (selectedStringIndex + 1) % inputStrings.Count;
+				return;
+			}
+
+			if(key == '\0') return; // Because every string ends with a null character to signify that the string is ending...
+			string alphabet = " abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZæøåÆØÅ'*^-.,\"1234567890";
+			if(alphabet.Contains(key)) 
+			{
+				inputStrings[selectedStringIndex] += key;
+
+				RedoRender = true;
+			}
+			if(key == '\b')
+			{
+				int len = inputStrings[selectedStringIndex].Length -1;
+				if(len < 0) len = 0;
+				inputStrings[selectedStringIndex] = inputStrings[selectedStringIndex].Substring(0, len);
+				RedoRender = true;
+			}
+
+		}
+
+		public bool ReRender() 
+		{
+			return RedoRender;
 		}
 	}
 }
