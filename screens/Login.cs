@@ -16,9 +16,9 @@ namespace LoginSystem
         public override void Draw(ref List<DrawMethod> buffer) 
         {
             buffer.Clear();
-            CursorPosition position = new CursorPosition(0, 0);
-            TextBox box = new TextBox(position, 3, 15, true);
-            string[] text = {"", "Login", ""};
+            CursorPosition position = new CursorPosition(6, 6);
+            TextBox box = new TextBox(position, 12, 48, false);
+            string[] text = {"Login", "","","","","","","","","","",""};
             AddBox(box, ref text, ref buffer);
         
             CursorPosition inputPosition = new CursorPosition(10, 10);
