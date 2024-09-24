@@ -164,6 +164,8 @@ namespace cli
 
 		protected void HandleInput(char key) 
 		{
+			if(inputStrings.Count <= 0) return;
+
 			if(key == '\t') 
 			{
 				selectedStringIndex = (selectedStringIndex + 1) % inputStrings.Count;
