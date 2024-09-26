@@ -1,6 +1,8 @@
 using System;
 using cli;
 using InputHandler;
+using ScreenHandler;
+using SkemaSystem;
 
 namespace LoginSystem
 {
@@ -9,6 +11,7 @@ namespace LoginSystem
 
         public override void Initialize()
         {
+            Console.Clear();
             inputStrings.Add("");
             inputStrings.Add("");
         }
@@ -37,6 +40,11 @@ namespace LoginSystem
         {
             char key = KeyboardListener.getKeys();
             HandleInput(key);
+        
+            if(key == '\r')
+            {
+                Screens.currentScreen = new Skema();
+            }
         }
     }
 }

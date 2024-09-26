@@ -1,8 +1,12 @@
 ﻿using System;
 using cli;
+using SkemaSystem;
 using LoginSystem;
 
 using InputHandler;
+using SkemaKlasseSystem; 
+
+using ScreenHandler;
 
 namespace Program
 {
@@ -16,21 +20,20 @@ namespace Program
 			List<DrawMethod> draw_methods = new List<DrawMethod>();
 
 			CLI cli = new CLI();
-			CLS	screen = new Login();
-			screen.Initialize();
+			Screens.currentScreen.Initialize();
 		
 			// Console.Clear();
-			screen.Draw(ref draw_methods);
+			Screens.currentScreen.Draw(ref draw_methods);
 			cli.Render(draw_methods);	
 
 			// Aomng comment
 
 			for(;;)
 			{
-				screen.Update();
-				if(screen.ReRender()) 
+				Screens.currentScreen.Update();
+				if(Screens.currentScreen.ReRender()) 
 				{
-					screen.Draw(ref draw_methods);
+					Screens.currentScreen.Draw(ref draw_methods);
 					cli.Render(draw_methods);	
 				}
 
