@@ -13,6 +13,7 @@ C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\obj\Debug\net8.0\refint\Opg
 C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\obj\Debug\net8.0\Opg1.pdb
 C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\obj\Debug\net8.0\Opg1.genruntimeconfig.cache
 C:\Users\lucas\Documents\AA IMPORTANT FOLDER\c#\Opg1\obj\Debug\net8.0\ref\Opg1.dll
+<<<<<<< HEAD
 C:\Users\armin\code\csproj1\bin\Debug\net8.0\Opg1.exe
 C:\Users\armin\code\csproj1\bin\Debug\net8.0\Opg1.deps.json
 C:\Users\armin\code\csproj1\bin\Debug\net8.0\Opg1.runtimeconfig.json
@@ -28,3 +29,20 @@ C:\Users\armin\code\csproj1\obj\Debug\net8.0\refint\Opg1.dll
 C:\Users\armin\code\csproj1\obj\Debug\net8.0\Opg1.pdb
 C:\Users\armin\code\csproj1\obj\Debug\net8.0\Opg1.genruntimeconfig.cache
 C:\Users\armin\code\csproj1\obj\Debug\net8.0\ref\Opg1.dll
+=======
+C:\Users\Kristaps\code\csproj1\bin\Debug\net8.0\Opg1.exe
+C:\Users\Kristaps\code\csproj1\bin\Debug\net8.0\Opg1.deps.json
+C:\Users\Kristaps\code\csproj1\bin\Debug\net8.0\Opg1.runtimeconfig.json
+C:\Users\Kristaps\code\csproj1\bin\Debug\net8.0\Opg1.dll
+C:\Users\Kristaps\code\csproj1\bin\Debug\net8.0\Opg1.pdb
+C:\Users\Kristaps\code\csproj1\obj\Debug\net8.0\Opg1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kristaps\code\csproj1\obj\Debug\net8.0\Opg1.AssemblyInfoInputs.cache
+C:\Users\Kristaps\code\csproj1\obj\Debug\net8.0\Opg1.AssemblyInfo.cs
+C:\Users\Kristaps\code\csproj1\obj\Debug\net8.0\Opg1.csproj.CoreCompileInputs.cache
+C:\Users\Kristaps\code\csproj1\obj\Debug\net8.0\Opg1.sourcelink.json
+C:\Users\Kristaps\code\csproj1\obj\Debug\net8.0\Opg1.dll
+C:\Users\Kristaps\code\csproj1\obj\Debug\net8.0\refint\Opg1.dll
+C:\Users\Kristaps\code\csproj1\obj\Debug\net8.0\Opg1.pdb
+C:\Users\Kristaps\code\csproj1\obj\Debug\net8.0\Opg1.genruntimeconfig.cache
+C:\Users\Kristaps\code\csproj1\obj\Debug\net8.0\ref\Opg1.dll
+>>>>>>> c6ad2b1c8c099f3c56d8cab99748bd3361f2f5a9
