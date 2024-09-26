@@ -3,6 +3,7 @@ using cli;
 using LoginSystem;
 
 using InputHandler;
+using StudentSystem;
 
 namespace Program
 {
@@ -14,6 +15,10 @@ namespace Program
 			Console.Clear();
 			// Write all code here.
 			List<DrawMethod> draw_methods = new List<DrawMethod>();
+
+			StudentHandler studentHandler = new StudentHandler();
+			studentHandler.addStudent(studentHandler.getExampleStudent());
+			studentHandler.saveToFile("studenter.xml");
 
 			CLI cli = new CLI();
 			CLS	screen = new Login();
