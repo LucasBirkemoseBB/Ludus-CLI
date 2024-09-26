@@ -50,7 +50,7 @@ namespace cli
 					if(!self.centeredText) Console.Write("│" + line.val.PadRight(self.c) + "│");
 					else 
 					{
-						Console.Write("│" + line.val.PadRight(self.c-line.val.Length).PadLeft(self.c) + "│");
+						Console.Write("│" + line.val.PadLeft(self.c/2+line.val.Length/2).PadRight(self.c) + "│");
 					}
 				}
 				Console.SetCursorPosition(self.position.x, self.position.y + self.r+1);
@@ -128,7 +128,7 @@ namespace cli
 
 	public abstract class CLS
 	{
-		protected bool RedoRender = false;
+		protected bool RedoRender = true;
 		protected List<string> inputStrings = new List<string>();
 		protected int selectedStringIndex = 0;
 
