@@ -4,14 +4,10 @@ using SkemaSystem;
 using LoginSystem;
 
 using InputHandler;
-<<<<<<< HEAD
 using SkemaKlasseSystem; 
 
 using ScreenHandler;
-=======
 using StudentSystem;
->>>>>>> c6ad2b1c8c099f3c56d8cab99748bd3361f2f5a9
-
 namespace Program
 {
 	internal class Program 
