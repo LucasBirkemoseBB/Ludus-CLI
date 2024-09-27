@@ -3,6 +3,8 @@ using cli;
 using InputHandler;
 using ScreenHandler;
 using SkemaSystem;
+using Constants;
+using CreatorSystem;
 
 namespace LoginSystem
 {
@@ -43,7 +45,16 @@ namespace LoginSystem
         
             if(key == '\r')
             {
-                Screens.currentScreen = new Skema();
+                var student = Consts.studentHandler.studenter.Find((x) => x.navn.Equals(inputStrings[0]));
+                if(student == null)
+                {
+                    Screens.currentScreen = new StudentCreator();
+                }
+                else
+                {
+                    Consts.studentHandler.currentStudent = student;
+                    Screens.currentScreen = new Skema();
+                }
             }
         }
     }

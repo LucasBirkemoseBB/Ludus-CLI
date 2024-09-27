@@ -8,6 +8,9 @@ using SkemaKlasseSystem;
 
 using ScreenHandler;
 using StudentSystem;
+
+using Constants;
+
 namespace Program
 {
 	internal class Program 
@@ -19,9 +22,9 @@ namespace Program
 			// Write all code here.
 			List<DrawMethod> draw_methods = new List<DrawMethod>();
 
-			StudentHandler studentHandler = new StudentHandler();
-			studentHandler.addStudent(studentHandler.getExampleStudent());
-			studentHandler.saveToFile("studenter.xml");
+			StudentHandler studentHandler = Consts.studentHandler;
+			studentHandler.addStudent(new Student("Faye", 16, "kok", "1g", 56798, "56798@edu.rybners.dk"));
+			Consts.messageHandler.sendMessage(56798, 32349, "This is a test message this is al ofisdjjiofjiodsjifidjosjiofjidsfj");
 
 			CLI cli = new CLI();
 			Screens.currentScreen.Initialize();

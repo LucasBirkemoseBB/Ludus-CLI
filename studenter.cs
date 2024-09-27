@@ -10,20 +10,32 @@ namespace StudentSystem
 {
     public class Student
     {
-        public Student() // tom konstruktør
-        {
-
-        }
+        
         public string navn { get; set; }
         public int alder { get; set; }
         public string studieRetning { get; set; }
-        public string klassår { get; set; }
-        public string studienummer { get; set; }
+        public string klassaar { get; set; }
+        public int studienummer { get; set; }
         public string studiemail { get; set; }
         
+        public Student(string navn, int alder, string retning, string aar, int nummer, string mail) // tom konstruktør
+        {
+            this.navn = navn;
+            this.alder = alder;
+            this.studieRetning = retning;
+            this.klassaar = aar;
+            this.studienummer = nummer;
+            this.studiemail = mail;
+        }
+
+        public Student() 
+        {
+
+        }
+
         public string Hentoplysninger()
         {
-            return $"Navnet er:{navn} : Alder er:{alder} : Studieretning:{studieRetning} : Klasse og Årgang:{klassår} : Studienummer:{studienummer} : Studiemail{studiemail} \n";
+            return $"Navnet er:{navn} : Alder er:{alder} : Studieretning:{studieRetning} : Klasse og Årgang:{klassaar} : Studienummer:{studienummer} : Studiemail{studiemail} \n";
         }
 
         public void UpdatereFeltStudieretning(string nytFelt)
@@ -36,20 +48,28 @@ namespace StudentSystem
     public class StudentHandler 
     {
         public List<Student> studenter = new List<Student>();
+        public Student currentStudent;
+
+        public StudentHandler() 
+        {
+            loadFromFile("studenter.xml");
+        }        
 
         public void addStudent(Student student)
         {
             studenter.Add(student);
+            saveToFile("studenter.xml");
         }
 
         public void removeStudent(Student student) 
         {
             studenter.Remove(student);
+            saveToFile("studenter.xml");
         }
 
         public Student getExampleStudent() 
         {
-            Student student = new Student();
+            Student student = new Student("", 0, "", "", 0, "");
             student.alder = 32;
             student.navn = "among balls";
             return student;

@@ -4,6 +4,7 @@ using InputHandler;
 using SkemaKlasseSystem;
 using ScreenHandler;
 using LoginSystem;
+using MessageSystem;
 
 namespace SkemaSystem
 {
@@ -62,6 +63,7 @@ namespace SkemaSystem
           break;
         case "meddelelser":
         case "msg":
+          Screens.currentScreen = new Messages();
           break;
         case "lektier":
           break;
