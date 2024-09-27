@@ -18,7 +18,7 @@ namespace StudentSystem
         public int alder { get; set; }
         public string studieRetning { get; set; }
         public string klassår { get; set; }
-        public string studienummer { get; set; }
+        public int studienummer { get; set; }
         public string studiemail { get; set; }
         
         public string Hentoplysninger()
