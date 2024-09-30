@@ -9,12 +9,12 @@
     <studiemail>32349@edu.rybners.dk</studiemail>
   </Student>
   <Student>
-    <navn>Faye</navn>
-    <alder>16</alder>
-    <studieRetning>kok</studieRetning>
+    <navn>Kristaps</navn>
+    <alder>3</alder>
+    <studieRetning>Kemi biotek</studieRetning>
     <klassaar>1g</klassaar>
-    <studienummer>56798</studienummer>
-    <studiemail>56798@edu.rybners.dk</studiemail>
+    <studienummer>31961</studienummer>
+    <studiemail>31961@edu.rybners.dk</studiemail>
   </Student>
   <Student>
     <navn>Faye</navn>
@@ -25,27 +25,35 @@
     <studiemail>56798@edu.rybners.dk</studiemail>
   </Student>
   <Student>
-    <navn>Faye</navn>
-    <alder>16</alder>
+    <navn>Jessica</navn>
+    <alder>53</alder>
     <studieRetning>kok</studieRetning>
-    <klassaar>1g</klassaar>
-    <studienummer>56798</studienummer>
-    <studiemail>56798@edu.rybners.dk</studiemail>
+    <klassaar>6g</klassaar>
+    <studienummer>43264</studienummer>
+    <studiemail>43264@edu.rybners.dk</studiemail>
   </Student>
   <Student>
-    <navn>Faye</navn>
-    <alder>16</alder>
-    <studieRetning>kok</studieRetning>
-    <klassaar>1g</klassaar>
-    <studienummer>56798</studienummer>
-    <studiemail>56798@edu.rybners.dk</studiemail>
+    <navn>Arminas</navn>
+    <alder>76</alder>
+    <studieRetning>Idret</studieRetning>
+    <klassaar>9g</klassaar>
+    <studienummer>32352</studienummer>
+    <studiemail>32352@edu.rybners.dk</studiemail>
   </Student>
   <Student>
-    <navn>Faye</navn>
-    <alder>16</alder>
-    <studieRetning>kok</studieRetning>
-    <klassaar>1g</klassaar>
-    <studienummer>56798</studienummer>
-    <studiemail>56798@edu.rybners.dk</studiemail>
+    <navn>Phillip</navn>
+    <alder>133</alder>
+    <studieRetning>Barbering</studieRetning>
+    <klassaar>32g</klassaar>
+    <studienummer>31967</studienummer>
+    <studiemail>31967@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Kristaps2</navn>
+    <alder>2321</alder>
+    <studieRetning>Vampyr</studieRetning>
+    <klassaar>69g</klassaar>
+    <studienummer>20421</studienummer>
+    <studiemail>20421@edu.rybners.dk</studiemail>
   </Student>
 </ArrayOfStudent>

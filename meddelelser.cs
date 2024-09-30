@@ -1,13 +1,17 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+
 using System.Text.Json;
-using StudentSystem;
+using System.Text.Json.Serialization;
 
 namespace MsgSystem
 {
-  public class Message 
+  public struct Message 
   {
-    public int sender, recipient;
-    public string content;
+    public int sender{get;set;}
+    public int recipient{get;set;}
+    public string content{get;set;}
 
     public Message(int sender, int recipient, string content) 
     {
@@ -16,26 +20,7 @@ namespace MsgSystem
       this.content = content;
     }
 
-    public Message() 
-    {
-      
-    }
-
-    public string getContent() 
-    {
-      return content;
-    }
-
-    public int getSender()
-    {
-      return sender;
-    }
-
-    public int getRecipient() 
-    {
-      return recipient;
-    }
-  }
+  };
 
   public class MessageHandler 
   {
@@ -62,7 +47,7 @@ namespace MsgSystem
     public List<Message> getRecievedMessages(int recipient)
     {
       if(messages.Count() == 0) return null;
-      return messages.FindAll((x) => x.getRecipient() == recipient);
+      return messages.FindAll((x) => x.recipient == recipient);
     }
   }
 }

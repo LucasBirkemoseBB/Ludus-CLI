@@ -12,6 +12,7 @@ namespace MessageSystem
 {
   public class Messages : CLS
   {
+    public Message selectedMessage = new Message(0,0,"");
 
     public override void Initialize()
     {
@@ -42,19 +43,36 @@ namespace MessageSystem
         for(int i = 0; i < messages.Count(); ++i) 
         {
           Message msg = messages[i];
-          Student ?student = Consts.studentHandler.studenter.Find(x => x.studienummer == msg.getSender());
+          Student ?student = Consts.studentHandler.studenter.Find(x => x.studienummer == msg.sender);
           if(student == null) continue;
 
           CursorPosition msg_position = new CursorPosition(2, 2 + 4 * i);
           TextBox msg_box = new TextBox(msg_position, 2, 40);
 
-          string content = msg.getContent();
+          string content = msg.content;
           if(content.Length >= 40) content = content.Substring(0, 37) + "...";
 
           string[] msg_text = {"From: " + student.navn, content};
 
           AddBox(msg_box, ref msg_text, ref buffer);
         }
+      }
+
+      if(selectedMessage.sender != 0)
+      {
+        string content = selectedMessage.content;
+        string[] msg_text = new string[20];
+        
+        int l = 0, r = 0;
+        for(int i = 0; i < content.Length; ++i) 
+        {
+          
+        }
+
+        CursorPosition msg_position = new CursorPosition(50, 2);
+        TextBox msg_box = new TextBox(msg_position, 20, 60);
+      
+        AddBox(msg_box, ref msg_text, ref buffer);
       }
 
       CursorPosition inputPosition = new CursorPosition(2, 34);
@@ -70,7 +88,14 @@ namespace MessageSystem
       char key = KeyboardListener.getKeys();
       HandleInput(key);
 
-      
+      List<Message> messages = Consts.messageHandler.getRecievedMessages(Consts.studentHandler.currentStudent.studienummer);
+
+      if(key == '\r')
+      {
+        int.TryParse(inputStrings[0], out int msgIdx);
+        selectedMessage = messages[msgIdx];
+        RedoRender = true;
+      }
     }
   }
 }
