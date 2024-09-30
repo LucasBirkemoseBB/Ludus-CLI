@@ -63,10 +63,15 @@ namespace MessageSystem
         string content = selectedMessage.content;
         string[] msg_text = new string[20];
         
-        int l = 0, r = 0;
-        for(int i = 0; i < content.Length; ++i) 
+        int l = 0, r = 0;å
+        while(r < content.Length) 
         {
-          
+          if((r-l)%60 == 0 && r != l) 
+          {
+            msg_text[l] = content.Substring(l, r);
+            r = l;
+          }
+          r++;
         }
 
         CursorPosition msg_position = new CursorPosition(50, 2);
