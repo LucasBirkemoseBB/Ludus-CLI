@@ -1,9 +1,15 @@
 ﻿using System;
 using cli;
+using SkemaSystem;
 using LoginSystem;
 
 using InputHandler;
+using SkemaKlasseSystem; 
+
+using ScreenHandler;
 using StudentSystem;
+
+using Constants;
 
 namespace Program
 {
@@ -16,26 +22,24 @@ namespace Program
 			// Write all code here.
 			List<DrawMethod> draw_methods = new List<DrawMethod>();
 
-			StudentHandler studentHandler = new StudentHandler();
-			studentHandler.addStudent(studentHandler.getExampleStudent());
-			studentHandler.saveToFile("studenter.xml");
+			// Consts.messageHandler.sendMessage(56798, 32349, "This is a test message this is al ofisdjjiofjiodsjifidjosjiofjidsfj");
+			// Consts.messageHandler.sendMessage(43264, 31961, "Hej lille dreng, vil du have noget slik ;)");
 
 			CLI cli = new CLI();
-			CLS	screen = new Login();
-			screen.Initialize();
+			Screens.currentScreen.Initialize();
 		
 			// Console.Clear();
-			screen.Draw(ref draw_methods);
+			Screens.currentScreen.Draw(ref draw_methods);
 			cli.Render(draw_methods);	
 
 			// Aomng comment
 
 			for(;;)
 			{
-				screen.Update();
-				if(screen.ReRender()) 
+				Screens.currentScreen.Update();
+				if(Screens.currentScreen.ReRender()) 
 				{
-					screen.Draw(ref draw_methods);
+					Screens.currentScreen.Draw(ref draw_methods);
 					cli.Render(draw_methods);	
 				}
 

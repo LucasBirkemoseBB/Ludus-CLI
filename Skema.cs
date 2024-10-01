@@ -5,31 +5,34 @@ using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace SkemaSystem
+namespace SkemaKlasseSystem
 {
-  public readonly struct Klasse 
+  // En skole klasse
+  public struct Klasse 
   {
-    private readonly int teacherId{get;}
-    private readonly int location{get;}
-    private readonly int length{get;}
-    private readonly string room{get;}
-    private readonly string klasse{get;}
-    private readonly string label{get;}
+    public int teacherId{get;set;}
+    public int location{get;set;}
+    public int length{get;set;}
+    public int day{get;set;}
+    public string room{get;set;}
+    public string klasse{get;set;}
+    public string label{get;set;}
 
-    public Klasse(int teacherId, int location, int length, string room, string klasse, string label)
+    public Klasse(int teacherId, int location, int length, int day, string room, string klasse, string label)
     {
       this.teacherId = teacherId;
       this.location = location;
       this.length = length;
+      this.day = day;
       this.room = room;
       this.klasse = klasse;
       this.label = label;
     }
   };
 
-  public class Skema 
+  public class SkemaHandler 
   {
-    public List<Klasse> klasser = new List<Klasse>();
+    private List<Klasse> klasser = new List<Klasse>();
 
     public void addKlasse(Klasse klasse)
     {
@@ -50,7 +53,18 @@ namespace SkemaSystem
     public void loadFromFile(string path)
     {
       string json = File.ReadAllText(path);
+ 
       klasser = JsonSerializer.Deserialize<List<Klasse>>(json);
+    }
+
+    public List<Klasse> getKlasser() 
+    {
+      return klasser;
+    }
+
+    public Klasse getKlasse(int idx) 
+    {
+      return klasser[idx];
     }
   }
 }

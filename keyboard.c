@@ -6,7 +6,6 @@
 
 char getKeys() 
 {
-
   char c = '\0';
   if(kbhit())
   {
