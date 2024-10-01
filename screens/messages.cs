@@ -33,7 +33,7 @@ namespace MessageSystem
       AddBox(box, ref text, ref buffer);
 
       List<Message> messages = Consts.messageHandler.getRecievedMessages(Consts.studentHandler.currentStudent.studienummer);
-      if(messages == null) 
+      if(messages == null || messages.Count() == 0) 
       {
         CursorPosition nomsgspos = new CursorPosition(10, 10);
         TextBox sad_box = new TextBox(nomsgspos, 3, 30, true);
@@ -132,12 +132,16 @@ namespace MessageSystem
             if(int.TryParse(inputStrings[1], out int userId)) 
             {
               messaging = Consts.studentHandler.studenter.Find(x => x.studienummer == userId);
+              selectedStringIndex = 2;
               break;
             }
             messaging = Consts.studentHandler.studenter.Find(x => x.navn.Equals(inputStrings[1]));
+            selectedStringIndex = 2;
             break;
           case 2:
             Consts.messageHandler.sendMessage(Consts.studentHandler.currentStudent.studienummer, messaging.studienummer, inputStrings[2]);
+            messaging = new Student();
+            selectedStringIndex = 0;
             break;
         }
       }

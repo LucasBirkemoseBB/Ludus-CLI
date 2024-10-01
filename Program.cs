@@ -5,6 +5,7 @@ using LoginSystem;
 
 using InputHandler;
 using SkemaKlasseSystem; 
+using LektierHandler;
 
 using ScreenHandler;
 using StudentSystem;
@@ -21,6 +22,9 @@ namespace Program
 			Console.Clear();
 			// Write all code here.
 			List<DrawMethod> draw_methods = new List<DrawMethod>();
+
+			// Consts.lektierHandler.addLektier(new Lektier("Modul", "opgabe", "lærer", "frist", "elevtimer", "rettet"));
+			
 
 			// Consts.messageHandler.sendMessage(56798, 32349, "This is a test message this is al ofisdjjiofjiodsjifidjosjiofjidsfj");
 			// Consts.messageHandler.sendMessage(43264, 31961, "Hej lille dreng, vil du have noget slik ;)");
