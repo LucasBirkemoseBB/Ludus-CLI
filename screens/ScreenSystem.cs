@@ -7,6 +7,6 @@ namespace ScreenHandler
 {
   public class Screens
   {
-    public static CLS currentScreen = new Lektier(); 
+    public static CLS currentScreen = new Login(); 
   }
 }
