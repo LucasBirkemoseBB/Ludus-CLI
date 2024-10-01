@@ -46,6 +46,7 @@ namespace cli
 				Console.Write("╭" + new string('─', self.c) + "╮");
 				foreach(var line in text.Select((val, index) => new { index, val }))
 				{
+					if(line.val == null) continue;
 					Console.SetCursorPosition(self.position.x, self.position.y + line.index+1);
 					if(!self.centeredText) Console.Write("│" + line.val.PadRight(self.c) + "│");
 					else 
