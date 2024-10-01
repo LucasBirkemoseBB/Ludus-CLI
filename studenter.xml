@@ -3,7 +3,7 @@
   <Student>
     <navn>Lucas</navn>
     <alder>17</alder>
-    <studieRetning>Programmering</studieRetning>
+    <studieRetning>Serious Programmering</studieRetning>
     <klassaar>2D</klassaar>
     <studienummer>32349</studienummer>
     <studiemail>32349@edu.rybners.dk</studiemail>
@@ -35,7 +35,7 @@
   <Student>
     <navn>Arminas</navn>
     <alder>17</alder>
-    <studieRetning>Programmering</studieRetning>
+    <studieRetning>Manhwa</studieRetning>
     <klassaar>2D</klassaar>
     <studienummer>32352</studienummer>
     <studiemail>32352@edu.rybners.dk</studiemail>
@@ -55,5 +55,181 @@
     <klassaar>2D</klassaar>
     <studienummer>20421</studienummer>
     <studiemail>20421@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Alexander</navn>
+    <alder>17</alder>
+    <studieRetning>Programmering</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>20603</studienummer>
+    <studiemail>20603@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Mongraal</navn>
+    <alder>17</alder>
+    <studieRetning>Programmering</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>20962</studienummer>
+    <studiemail>20962@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Anna</navn>
+    <alder>18</alder>
+    <studieRetning>Programmering</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>22402</studienummer>
+    <studiemail>22402@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Casper</navn>
+    <alder>18</alder>
+    <studieRetning>Programmering</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>21542</studienummer>
+    <studiemail>21542@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Christian</navn>
+    <alder>18</alder>
+    <studieRetning>Programmering</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>20519</studienummer>
+    <studiemail>20519@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Elliot</navn>
+    <alder>17</alder>
+    <studieRetning>Programmering</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>31667</studienummer>
+    <studiemail>31667@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Felix</navn>
+    <alder>17</alder>
+    <studieRetning>Tyverikundskab</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>31746</studienummer>
+    <studiemail>31746@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Franciszek</navn>
+    <alder>17</alder>
+    <studieRetning>Programmering</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>20913</studienummer>
+    <studiemail>20913@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Harley</navn>
+    <alder>17</alder>
+    <studieRetning>Programmering</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>32273</studienummer>
+    <studiemail>32273@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Ida</navn>
+    <alder>17</alder>
+    <studieRetning>Programmering</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>31268</studienummer>
+    <studiemail>31268@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Jacob</navn>
+    <alder>17</alder>
+    <studieRetning>Programmering</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>32067</studienummer>
+    <studiemail>32067@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Jonatan</navn>
+    <alder>17</alder>
+    <studieRetning>Landmand</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>34156</studienummer>
+    <studiemail>34156@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Laust</navn>
+    <alder>17</alder>
+    <studieRetning>Programmering</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>20432</studienummer>
+    <studiemail>20432@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Mads</navn>
+    <alder>18</alder>
+    <studieRetning>Programmering</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>20615</studienummer>
+    <studiemail>20615@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Mathias</navn>
+    <alder>17</alder>
+    <studieRetning>Programmering</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>21820</studienummer>
+    <studiemail>21820@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Razvan</navn>
+    <alder>17</alder>
+    <studieRetning>Idraet</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>31354</studienummer>
+    <studiemail>31354@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Minghao</navn>
+    <alder>17</alder>
+    <studieRetning>Programmering</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>32100</studienummer>
+    <studiemail>32100@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Sarah</navn>
+    <alder>18</alder>
+    <studieRetning>Programmering</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>21550</studienummer>
+    <studiemail>21550@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Tobias</navn>
+    <alder>16</alder>
+    <studieRetning>Programmering for real</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>40579</studienummer>
+    <studiemail>40579@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Una</navn>
+    <alder>17</alder>
+    <studieRetning>Programmering</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>31525</studienummer>
+    <studiemail>31525@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Victor</navn>
+    <alder>17</alder>
+    <studieRetning>Programmering</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>32054</studienummer>
+    <studiemail>32054@edu.rybners.dk</studiemail>
+  </Student>
+  <Student>
+    <navn>Viktor</navn>
+    <alder>18</alder>
+    <studieRetning>Programmering</studieRetning>
+    <klassaar>2D</klassaar>
+    <studienummer>21276</studienummer>
+    <studiemail>21276@edu.rybners.dk</studiemail>
   </Student>
 </ArrayOfStudent>
