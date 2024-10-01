@@ -13,10 +13,12 @@ namespace MessageSystem
   public class Messages : CLS
   {
     public Message selectedMessage = new Message(0,0,"");
+    public Student messaging = new Student();
 
     public override void Initialize()
     {
       Console.Clear();
+      inputStrings.Add("");
       inputStrings.Add("");
     }
 
@@ -61,29 +63,40 @@ namespace MessageSystem
       if(selectedMessage.sender != 0)
       {
         string content = selectedMessage.content;
-        string[] msg_text = new string[20];
+        double length = content.Length;
+        double lines = (content.Length/60d);
+        string[] msg_text = new string[(int)Math.Ceiling(lines)];
         
-        int l = 0, r = 0;
-        while(r < content.Length) 
+        if(content.Length >= 60) 
         {
-          if((r-l)%60 == 0 && r != l) 
+          int count = 0;
+          for(int i = 0; i < content.Length; i+=60, count++)
           {
-            msg_text[l] = content.Substring(l, r);
-            l = r;
+            msg_text[count] = content.Substring(i, content.Length-i>=60?60:content.Length-i);
           }
-          r++;
         }
 
         CursorPosition msg_position = new CursorPosition(50, 2);
-        TextBox msg_box = new TextBox(msg_position, 20, 60);
+        TextBox msg_box = new TextBox(msg_position, content.Length/60+1, 60);
       
         AddBox(msg_box, ref msg_text, ref buffer);
       }
 
-      CursorPosition inputPosition = new CursorPosition(2, 34);
-      InputBox ibox = new InputBox(inputPosition, "Read msg nr. ", 1, 40);
-      AddInputBox(ibox, inputStrings[0], ref buffer);
+      if(messaging.navn != null) 
+      {
+        CursorPosition msg_position = new CursorPosition(50, 2);
+        InputBox msg_box = new InputBox(msg_position, "Message content: ", 6, 60);
+        AddInputBox(msg_box, inputStrings[2], ref buffer);
+      }
 
+      CursorPosition inputPosition = new CursorPosition(0, 34);
+      InputBox ibox = new InputBox(inputPosition, "Read msg nr. ", 1, 16);
+      AddInputBox(ibox, inputStrings[0], ref buffer);
+      
+      CursorPosition inputPosition2 = new CursorPosition(18, 34);
+      InputBox ibox2 = new InputBox(inputPosition2, "Send message to:", 1, 18);
+      AddInputBox(ibox2, inputStrings[1], ref buffer);
+      
       // if(keyDown != '\0') text = text + keyDown; 
       RedoRender = false;
     }
@@ -97,9 +110,36 @@ namespace MessageSystem
 
       if(key == '\r')
       {
-        int.TryParse(inputStrings[0], out int msgIdx);
-        selectedMessage = messages[msgIdx];
-        RedoRender = true;
+        switch(selectedStringIndex) 
+        {
+          case 0:
+            int.TryParse(inputStrings[0], out int msgIdx);
+            selectedMessage = messages[msgIdx];
+            RedoRender = true;
+            if(inputStrings.Count() > 2)
+            {
+              inputStrings.RemoveAt(2);
+            }
+            messaging = new Student();
+            break;
+          case 1:
+            RedoRender = true;
+            
+            if(inputStrings.Count() < 3)
+              inputStrings.Add("");
+
+            selectedMessage = new Message(0,0,"");
+            if(int.TryParse(inputStrings[1], out int userId)) 
+            {
+              messaging = Consts.studentHandler.studenter.Find(x => x.studienummer == userId);
+              break;
+            }
+            messaging = Consts.studentHandler.studenter.Find(x => x.navn.Equals(inputStrings[1]));
+            break;
+          case 2:
+            Consts.messageHandler.sendMessage(Consts.studentHandler.currentStudent.studienummer, messaging.studienummer, inputStrings[2]);
+            break;
+        }
       }
     }
   }
