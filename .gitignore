@@ -3,3 +3,5 @@ obj/*
 bin/*
 bin/
 *.csproj
+webserver-shh/
+webserver-shh/*
