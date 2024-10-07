@@ -55,7 +55,7 @@ namespace MsgSystem
 
     public async void loadFromServer()
     {
-      using HttpResponseMessage response = await messageClient.GetAsync("http://10.144.107.196:4201/");
+      using HttpResponseMessage response = await messageClient.GetAsync("http://10.144.108.163:4201/");
       response.EnsureSuccessStatusCode();
       var responseBody = await response.Content.ReadAsStreamAsync();
 
@@ -65,7 +65,7 @@ namespace MsgSystem
     public async void sendToServer(Message message)
     {
       var content = JsonContent.Create(message);
-      var post = await messageClient.PostAsync("http://10.144.107.196:4201/", content);
+      var post = await messageClient.PostAsync("http://10.144.108.163:4201/", content);
       
     }
   }
