@@ -55,29 +55,19 @@ namespace MsgSystem
 
     public async void loadFromServer()
     {
-<<<<<<< HEAD
-      using HttpResponseMessage response = await messageClient.GetAsync("http://localhost:4201/");
-=======
-      /*
-      using HttpResponseMessage response = await messageClient.GetAsync("http://10.144.108.163:4201/");
->>>>>>> ac9df409d628ccc723525c0b7a043ece2a554b79
+      using HttpResponseMessage response = await messageClient.GetAsync("http://10.144.100.13:4201/");
       response.EnsureSuccessStatusCode();
       var responseBody = await response.Content.ReadAsStreamAsync();
 
-      messages = JsonSerializer.Deserialize<List<Message>>(responseBody);*/
+      messages = JsonSerializer.Deserialize<List<Message>>(responseBody);
     }
 
     public async void sendToServer(Message message)
     {
-      /*
-      var content = JsonContent.Create(message);
-<<<<<<< HEAD
-      var post = await messageClient.PostAsync("http://localhost:4201/", content);
       
-=======
-      var post = await messageClient.PostAsync("http://10.144.108.163:4201/", content);
-      */      
->>>>>>> ac9df409d628ccc723525c0b7a043ece2a554b79
+      var content = JsonContent.Create(message);
+      var post = await messageClient.PostAsync("http://10.144.100.13:4201/", content);
+      
     }
   }
 }
