@@ -8,7 +8,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace MsgSystem
+namespace MessageSystem
 {
   public struct Message
   {

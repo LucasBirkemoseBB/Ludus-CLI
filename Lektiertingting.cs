@@ -6,7 +6,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 
 
-namespace LektierHandler 
+namespace LektierSystem 
 {
     public struct Lektier 
     {
@@ -28,7 +28,7 @@ namespace LektierHandler
         }
     }
 
-    public class LektierWorker 
+    public class LektierHandler 
     {
         private List<Lektier> lektierList = new List<Lektier>();
         private const string path = "lektier.json";

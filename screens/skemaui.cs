@@ -1,7 +1,6 @@
 using System;
 using cli;
 using InputHandler;
-using SkemaKlasseSystem;
 using ScreenHandler;
 using LoginSystem;
 using MessageSystem;

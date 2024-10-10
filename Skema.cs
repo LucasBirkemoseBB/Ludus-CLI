@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace SkemaKlasseSystem
+namespace SkemaSystem
 {
   // En skole klasse
   public struct Klasse 

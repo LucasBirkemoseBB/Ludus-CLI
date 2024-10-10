@@ -1,7 +1,7 @@
 using System;
-using MsgSystem;
+using MessageSystem;
 using StudentSystem;
-using LektierHandler;
+using LektierSystem;
 
 namespace Constants 
 {
@@ -9,6 +9,6 @@ namespace Constants
   {
     public static StudentHandler studentHandler = new StudentHandler();
     public static MessageHandler messageHandler = new MessageHandler();
-    public static LektierWorker lektierHandler = new LektierWorker();
+    public static LektierHandler lektierHandler = new LektierHandler();
   }
 }

@@ -10,23 +10,4 @@ namespace InputHandler
     [DllImport("keyboard.so", EntryPoint="getKeys")]
     public static extern char getKeys();
   };
-
-  public class KeyboardInput 
-  {
-
-
-    public void Initialize() 
-    {
-      /*
-      while(true) 
-      {
-        
-        char keyDown = KeyboardListener.getKeys();
-      
-        // if(keyDown != '\0') Console.WriteLine(keyDown);
-      }*/
-
-
-    }
-  };
 }
