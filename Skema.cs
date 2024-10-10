@@ -53,7 +53,7 @@ namespace SkemaKlasseSystem
     public void loadFromFile(string path)
     {
       string json = File.ReadAllText(path);
- 
+
       klasser = JsonSerializer.Deserialize<List<Klasse>>(json);
     }
 

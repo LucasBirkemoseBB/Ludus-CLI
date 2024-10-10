@@ -18,6 +18,7 @@ namespace MessageSystem
     public override void Initialize()
     {
       Console.Clear();
+      Consts.messageHandler.loadFromServer();
       inputStrings.Add("");
       inputStrings.Add("");
     }
@@ -97,7 +98,6 @@ namespace MessageSystem
       InputBox ibox2 = new InputBox(inputPosition2, "Send message to:", 1, 18);
       AddInputBox(ibox2, inputStrings[1], ref buffer);
       
-      // if(keyDown != '\0') text = text + keyDown; 
       RedoRender = false;
     }
 
@@ -113,8 +113,11 @@ namespace MessageSystem
         switch(selectedStringIndex) 
         {
           case 0:
-            int.TryParse(inputStrings[0], out int msgIdx);
-            selectedMessage = messages[msgIdx];
+            if(int.TryParse(inputStrings[0], out int msgIdx))
+              selectedMessage = messages[msgIdx];
+            else 
+              if(inputStrings[0].Equals("back"))
+                Screens.currentScreen = new Skema();
             RedoRender = true;
             if(inputStrings.Count() > 2)
             {
