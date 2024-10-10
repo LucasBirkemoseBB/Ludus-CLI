@@ -5,6 +5,7 @@ using SkemaKlasseSystem;
 using ScreenHandler;
 using LoginSystem;
 using MessageSystem;
+using KursistSystem;
 
 namespace SkemaSystem
 {
@@ -60,6 +61,7 @@ namespace SkemaSystem
           Screens.currentScreen = new Login();
           break;
         case "kursist":
+          Screens.currentScreen = new Kursist();
           break;
         case "meddelelser":
         case "msg":
