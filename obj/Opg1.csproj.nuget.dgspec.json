@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lucas\\Documents\\AA IMPORTANT FOLDER\\c#\\Opg1\\Opg1.csproj": {}
+    "C:\\Users\\Kristaps\\code\\csproj1\\Opg1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucas\\Documents\\AA IMPORTANT FOLDER\\c#\\Opg1\\Opg1.csproj": {
+    "C:\\Users\\Kristaps\\code\\csproj1\\Opg1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucas\\Documents\\AA IMPORTANT FOLDER\\c#\\Opg1\\Opg1.csproj",
+        "projectUniqueName": "C:\\Users\\Kristaps\\code\\csproj1\\Opg1.csproj",
         "projectName": "Opg1",
-        "projectPath": "C:\\Users\\lucas\\Documents\\AA IMPORTANT FOLDER\\c#\\Opg1\\Opg1.csproj",
-        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucas\\Documents\\AA IMPORTANT FOLDER\\c#\\Opg1\\obj\\",
+        "projectPath": "C:\\Users\\Kristaps\\code\\csproj1\\Opg1.csproj",
+        "packagesPath": "C:\\Users\\Kristaps\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kristaps\\code\\csproj1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Kristaps\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
