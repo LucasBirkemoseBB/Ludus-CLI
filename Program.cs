@@ -4,8 +4,8 @@ using SkemaSystem;
 using LoginSystem;
 
 using InputHandler;
-using SkemaKlasseSystem; 
-using LektierHandler;
+using SkemaSystem; 
+using LektierSystem;
 
 using ScreenHandler;
 using StudentSystem;

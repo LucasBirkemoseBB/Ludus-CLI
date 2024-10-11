@@ -4,7 +4,7 @@ using InputHandler;
 
 namespace LektierSystem
 {
-    public class Lektier : CLS
+    public class LektierScreen : CLS
     {
 
         public override void Initialize()

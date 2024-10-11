@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "y6WThPOB8NA=",
+  "dgSpecHash": "FJbtAPcE69WU0G4zCZ2EkaBUdkUWLLDuOPrq0vuxDwi9L/JmdHJFetrmnyN4R3XN8Gs/7wX2okYG1+YDP/uDZQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lucas\\Documents\\AA IMPORTANT FOLDER\\c#\\Opg1\\Opg1.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/lucas/cs/Opg1.csproj",
+  "expectedPackageFiles": [
+    "/home/lucas/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.8/microsoft.aspnetcore.app.ref.8.0.8.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -5,6 +5,8 @@ using ScreenHandler;
 using LoginSystem;
 using MessageSystem;
 using KursistSystem;
+using System.Diagnostics;
+using LektierSystem;
 
 namespace SkemaSystem
 {
@@ -67,6 +69,7 @@ namespace SkemaSystem
           Screens.currentScreen = new Messages();
           break;
         case "lektier":
+          Screens.currentScreen = new LektierScreen();
           break;
         };
       }
