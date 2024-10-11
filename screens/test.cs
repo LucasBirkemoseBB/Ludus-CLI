@@ -1,6 +1,8 @@
 using System;
 using cli;
 
+// Used to test CLI featuress
+
 namespace test 
 {
   public class Test : CLS 

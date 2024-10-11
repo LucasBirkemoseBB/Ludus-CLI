@@ -2,8 +2,7 @@
 #include <Windows.h>
 #include <conio.h>
 
-#define uint32_t unsigned int
-
+// Returns the last key pressed and if one is not pressed it returns \0
 char getKeys() 
 {
   char c = '\0';

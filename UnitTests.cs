@@ -2,6 +2,7 @@ using System;
 
 namespace UnitTests
 {
+	// Used for unit tests (Testing functions by themselves)
 	public class UnitTests<T>
 	{
 		public delegate bool CompareFunc(params T[] param);

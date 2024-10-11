@@ -19,24 +19,16 @@ namespace Program
 		// Main entry
 		static void Main(string[] args)
 		{
+			// Clears the screen before rendering anything at all
 			Console.Clear();
-			// Write all code here.
 			List<DrawMethod> draw_methods = new List<DrawMethod>();
 
-			// Consts.lektierHandler.addLektier(new Lektier("Modul", "opgabe", "lærer", "frist", "elevtimer", "rettet"));
-			
-
-			// Consts.messageHandler.sendMessage(56798, 32349, "This is a test message this is al ofisdjjiofjiodsjifidjosjiofjidsfj");
-			// Consts.messageHandler.sendMessage(43264, 31961, "Hej lille dreng, vil du have noget slik ;)");
-
+			// Defines everything
 			CLI cli = new CLI();
 			Screens.currentScreen.Initialize();
-		
-			// Console.Clear();
+
 			Screens.currentScreen.Draw(ref draw_methods);
 			cli.Render(draw_methods);	
-
-			// Aomng comment
 
 			for(;;)
 			{
@@ -48,9 +40,7 @@ namespace Program
 				}
 
 				continue;
-				// cli.Update();
 			}
-			// Console.Read();			
 		}
 	}
 }

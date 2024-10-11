@@ -8,6 +8,7 @@ using System.Text.Json.Serialization;
 namespace SkemaSystem
 {
   // En skole klasse
+  // Using a struct as its easier to read and write json files with
   public struct Klasse 
   {
     public int teacherId{get;set;}
@@ -34,6 +35,7 @@ namespace SkemaSystem
   {
     private List<Klasse> klasser = new List<Klasse>();
 
+    // Self describing
     public void addKlasse(Klasse klasse)
     {
       klasser.Add(klasse);

@@ -10,6 +10,7 @@ using System.Text.Json.Serialization;
 
 namespace MessageSystem
 {
+  // Structs are easier to read and write json files with
   public struct Message
   {
     public int sender { get; set; }
@@ -24,6 +25,9 @@ namespace MessageSystem
     }
 
   };
+
+  // All the commented out stuff is if you dont have a webserver up and running on port 4201
+  // Comment out the webserver functions and uncomment the commented stuff if you want to save it locally
 
   public class MessageHandler
   {

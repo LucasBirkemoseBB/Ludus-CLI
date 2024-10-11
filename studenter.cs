@@ -8,6 +8,8 @@ using System.Xml.Serialization;
 
 namespace StudentSystem
 {
+    // Uhhhh no idea why this isnt a struct but its to late to fix now 
+    // Noticed on (11-10-2024)
     public class Student
     {
         
@@ -50,6 +52,7 @@ namespace StudentSystem
         public List<Student> studenter = new List<Student>();
         public Student currentStudent;
 
+        // Self describing
         public StudentHandler() 
         {
             loadFromFile("studenter.xml");

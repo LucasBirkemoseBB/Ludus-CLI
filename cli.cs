@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 
 namespace cli
 {
+	// A struct used by the CLS to know where to start drawing
 	public readonly struct CursorPosition
 	{
 		public int x{get;}
@@ -15,9 +16,9 @@ namespace cli
 			this.x = x;
 			this.y = y;
 		}	
-	};
 
-	public readonly struct TextBox
+	};
+ 	public readonly struct TextBox
 	{
 		private CursorPosition position{get;}
 		private int r{get;}
@@ -36,6 +37,8 @@ namespace cli
 		// Carsten ik bliv sur pls, fordi det er funktionelt programmering med currying
 		// Gad sgu bare ikke tænke meget om denne funktion
 		// -Mvh Lucas
+
+		// Draws a textbox with the strings strs inside on the console
 		public readonly DrawMethod draw(ref string[] strs) {
 			var self = this;
 			var text = strs;
@@ -77,6 +80,7 @@ namespace cli
 			this.c = c;	// collumns
 		}
 
+		// Draws a small textbox with the input inside
 		public readonly DrawMethod draw(string input) 
 		{
 			var self = this;
@@ -138,9 +142,16 @@ namespace cli
 			Initialize();
 		}
 
+		// Usually used to clear screen and add inputStrings 
 		public abstract void Initialize();
+		
+		// Adds DrawMethods to the buffer
 		public abstract void Draw(ref List<DrawMethod> buffer);
+		
+		// Decides whether or not to redraw, also handles input
 		public abstract void Update();
+
+		// Adds a string to a position on the console (Not used as far as im concerned)
 		protected void WriteText(string str, CursorPosition position, ref List<DrawMethod> buffer)
 		{
 			
@@ -153,21 +164,25 @@ namespace cli
 			});
 		}
 
+		// Adds a textbox to the DrawMethod buffer
 		protected void AddBox(TextBox box, ref string[] text, ref List<DrawMethod> buffer)
 		{
 			buffer.Add(box.draw(ref text));
 		}
 
+		// Adds an inputbox to the drawmethods taking in the input text as argument
 		protected void AddInputBox(InputBox box, string text, ref List<DrawMethod> buffer) 
 		{
 			buffer.Add(box.draw(text));
 		}
 
+		// Adds an inputbox to the drawmethods using the inputIdx to find the inputString
 		protected void AddInputBox(InputBox box, int inputIdx, ref List<DrawMethod> buffer) 
 		{
 			buffer.Add(box.draw(inputStrings[inputIdx]));
 		}
 
+		// Self describing, handles the input and also writes to the inputStrings
 		protected void HandleInput(char key) 
 		{
 			if(inputStrings.Count <= 0) return;
@@ -196,6 +211,7 @@ namespace cli
 
 		}
 
+		// Used by the update loop to know whether or not if should redraw
 		public bool ReRender() 
 		{
 			return RedoRender;
